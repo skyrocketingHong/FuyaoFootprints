@@ -1,0 +1,58 @@
+{
+  "app": {
+    "title": "skyrocketing的旅行足迹"
+  },
+  "common": {
+    "close": "关闭",
+    "all": "全部",
+    "filter": "筛选",
+    "year": "年份",
+    "clearFilter": "清除筛选",
+    "showAllLocations": "显示全部地点",
+    "selectFromList": "从列表中选择一个地点来查看详情"
+  },
+  "list": {
+    "title": "地点列表",
+    "stats": "共 {{count}} 个地点",
+    "statsFiltered": "（筛选自 {{total}} 个）",
+    "noLocations": "没有找到匹配的地点"
+  },
+  "location": {
+    "visitDate": "访问日期："
+  },
+  "categories": {
+    "city": "城市",
+    "nature": "自然景观",
+    "historical": "历史遗迹",
+    "food": "美食",
+    "other": "其他"
+  },
+  "editor": {
+    "title": "地点数据编辑帮助",
+    "step1": "1. 通过地点搜索获取经纬度",
+    "step2": "2. 复制生成的JSON格式数据",
+    "step3": "3. 将数据添加到locations.json文件"
+  },
+  "creator": {
+    "title": "添加新地点",
+    "name": "地点名称",
+    "namePlaceholder": "输入地点名称搜索",
+    "description": "描述",
+    "descriptionPlaceholder": "地点描述",
+    "date": "访问日期",
+    "category": "分类",
+    "coordinates": "经纬度 (自动填充)",
+    "generate": "生成JSON",
+    "alerts": {
+      "noName": "请输入地点名称并从下拉列表中选择",
+      "noCoordinates": "请从下拉列表中选择一个地点以获取经纬度",
+      "noDescription": "请输入地点描述",
+      "noDate": "请选择访问日期",
+      "jsonCopied": "JSON数据已复制到剪贴板！可以粘贴到locations.json文件中。",
+      "copyError": "无法复制: "
+    }
+  },
+  "footer": {
+    "copyright": "<span>Serverd by <a href=https://cn.aliyun.com/chinaglobal/home rel=\"noopener noreferrer\" target=_blank>Aliyun Hong Kong</a> & <a href=https://caddyserver.com/v2 rel=noopener target=_blank>Caddy 2</a></span><br><span>&copy; 2016&nbsp;-&nbsp;2025 <span>扶摇skyrocketing (skyrocketing Hong)</span>&nbsp;</span><span><p class=moe-icon>&nbsp;<a href=\"https://icp.gov.moe/?keyword=20259959\" rel=\"noopener noreferrer\" target=_blank>萌ICP备20259959号</a></span>"
+  }
+}

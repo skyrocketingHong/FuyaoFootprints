@@ -1,0 +1,196 @@
+/* 基础样式 */
+body {
+  font-family: "Noto Sans SC", sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding-bottom: 40px; /* 为固定footer留出空间 */
+}
+
+/* 夜间模式样式 */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  .list-content,
+  .location-card,
+  .location-list {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0 !important;
+  }
+  .location-card {
+    border-color: #333333 !important;
+  }
+  .text-gray-600,
+  .text-gray-700 {
+    color: #b0b0b0 !important;
+  }
+  .bg-white,
+  .bg-gray-50 {
+    background-color: #1e1e1e !important;
+  }
+  .border-gray-100,
+  .border-gray-200,
+  .border-gray-300 {
+    border-color: #333333 !important;
+  }
+  input,
+  select,
+  textarea {
+    background-color: #2d2d2d !important;
+    color: #e0e0e0 !important;
+    border-color: #444444 !important;
+  }
+  input::placeholder {
+    color: #888888 !important;
+  }
+  .bg-gray-200 {
+    background-color: #333333 !important;
+    color: #b0b0b0 !important;
+  }
+  .text-gray-700 {
+    color: #b0b0b0 !important;
+  }
+  /* 浮动按钮夜间模式样式 */
+  #show-creator,
+  #show-hint {
+    background-color: #3730a3 !important; /* 深色靛蓝色 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4) !important;
+  }
+  .location-creator-content,
+  .json-output {
+    background-color: #2d2d2d !important;
+    color: #e0e0e0 !important;
+  }
+  .close-btn {
+    background-color: #2d2d2d !important;
+    color: #e0e0e0 !important;
+    border-color: #444444 !important;
+  }
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 40px); /* 考虑到固定footer */
+}
+
+.main-container {
+  flex: 1 0 auto; /* 确保内容区域能够伸展 */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+footer {
+  position: fixed; /* 固定定位 */
+  bottom: 0; /* 固定在底部 */
+  left: 0; /* 确保左对齐 */
+  height: 40px; /* 固定高度 */
+  line-height: 13px; /* 垂直居中文本 */
+  padding: 0; /* 移除padding，使用line-height垂直居中 */
+  font-size: xx-small;
+  width: 100%;
+  text-align: center;
+  background-color: #f8f9fa; /* 确保有背景色 */
+  border-top: 1px solid #eaeaea; /* 添加上边框以区分内容 */
+  z-index: 1000; /* 确保在其他内容之上 */
+  color: rgb(108, 108, 108);
+}
+
+/* 为夜间模式添加footer样式 */
+@media (prefers-color-scheme: dark) {
+  footer {
+    background-color: #121212;
+    border-top: 1px solid #333;
+  }
+}
+
+/* 通用浮动按钮样式 */
+.show-creator-btn,
+.show-hint-btn {
+  position: fixed;
+  bottom: 60px; /* 避开固定footer */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease; /* 添加过渡效果 */
+}
+
+.show-creator-btn {
+  left: 20px;
+}
+
+.show-hint-btn {
+  right: 20px;
+}
+
+/* 按钮悬停效果 */
+.show-creator-btn:hover,
+.show-hint-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* 按钮点击动画效果 */
+.show-creator-btn:active,
+.show-hint-btn:active,
+.close-hint-btn:active,
+.close-btn:active,
+.generate-btn:active,
+button:active,
+.location-card:active {
+  transform: scale(0.95);
+  opacity: 0.9;
+  transition: transform 0.1s, opacity 0.1s;
+}
+
+/* 添加所有按钮的点击波纹效果 */
+button,
+.location-card {
+  position: relative;
+  overflow: hidden;
+}
+
+button::after,
+.location-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.5s;
+}
+
+button:active::after,
+.location-card:active::after {
+  transform: scale(0, 0);
+  opacity: 0.3;
+  transition: 0s;
+}

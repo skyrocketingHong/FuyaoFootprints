@@ -1,0 +1,37 @@
+[
+  {
+    "name": "北京",
+    "description": "中国首都，有长城、故宫等著名景点。",
+    "coordinates": [116.4074, 39.9042],
+    "visitDate": "2022-05-10",
+    "category": "城市"
+  },
+  {
+    "name": "上海",
+    "description": "中国经济中心，有外滩、东方明珠等地标。",
+    "coordinates": [121.4737, 31.2304],
+    "visitDate": "2022-06-15",
+    "category": "城市"
+  },
+  {
+    "name": "香港",
+    "description": "国际金融中心，风景优美，中西文化交融。",
+    "coordinates": [114.1694, 22.3193],
+    "visitDate": "2022-07-20",
+    "category": "城市"
+  },
+  {
+    "name": "黄山",
+    "description": "世界文化与自然双重遗产，以奇松、怪石、云海、温泉著称。",
+    "coordinates": [118.1722, 30.1418],
+    "visitDate": "2022-08-05",
+    "category": "自然景观"
+  },
+  {
+    "name": "成都",
+    "description": "四川省会，有大熊猫基地、锦里古街等景点。",
+    "coordinates": [104.0668, 30.5728],
+    "visitDate": "2022-09-10",
+    "category": "城市"
+  }
+]

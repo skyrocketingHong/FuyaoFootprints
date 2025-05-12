@@ -1,0 +1,57 @@
+/* 浮动按钮样式 */
+.show-creator-btn,
+.show-hint-btn {
+  position: fixed;
+  bottom: 60px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.show-creator-btn {
+  left: 20px;
+}
+
+.show-hint-btn {
+  right: 20px;
+}
+
+/* 按钮悬停效果 */
+.show-creator-btn:hover,
+.show-hint-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* 按钮点击动画效果 */
+.show-creator-btn:active,
+.show-hint-btn:active,
+.close-btn:active {
+  transform: scale(0.95);
+  opacity: 0.9;
+  transition: transform 0.1s, opacity 0.1s;
+}
+
+/* 按钮点击动画效果 */
+#show-creator:active,
+#show-hint:active,
+#close-hint:active,
+#close-creator:active,
+#generate-json:active,
+.language-selector button:active,
+.location-card:active {
+  transform: scale(0.95);
+  opacity: 0.9;
+  transition: transform 0.1s, opacity 0.1s;
+}

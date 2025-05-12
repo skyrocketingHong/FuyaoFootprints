@@ -1,0 +1,145 @@
+/* 列表基础样式 - 适用于所有设备 */
+.list-content {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out; /* 使用ease-in-out提供更好的折叠效果 */
+  height: 100%;
+  will-change: max-height; /* 提示浏览器此属性将改变，优化渲染 */
+}
+
+/* 位置卡片样式 */
+.location-card {
+  transition: all 0.3s ease;
+  margin-bottom: 0.5rem;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.location-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.location-card.active {
+  border-left: 4px solid #4f46e5 !important;
+  background-color: #eef2ff !important;
+  padding-left: calc(0.75rem - 4px);
+}
+
+.location-list {
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: white;
+  padding: 0.25rem 0.5rem;
+}
+
+.filter-box {
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.stats-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background-color: #eef2ff;
+  color: #4f46e5;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+/* 自定义滚动条 */
+.location-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.location-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.location-list::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 3px;
+}
+
+.location-list::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+/* 桌面端列表样式 */
+@media (min-width: 1025px) {
+  .list-column {
+    max-height: none !important; /* 确保桌面端不限制高度 */
+    overflow: visible !important;
+  }
+  .location-list {
+    max-height: calc(100vh - 250px); /* 桌面端列表高度 */
+  }
+}
+
+/* 移动端优化样式 */
+@media (max-width: 1024px) {
+  .list-column {
+    width: 100%;
+    background: transparent; /* 移除容器背景 */
+    border-radius: 8px;
+    transition: none; /* 移除整体过渡效果 */
+    margin-bottom: 1rem;
+    overflow: visible;
+  }
+
+  .list-content {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* 添加平滑过渡 */
+    overflow: hidden;
+  }
+
+  .list-content-collapsed {
+    max-height: 56px; /* 确保刚好容纳标题 */
+  }
+
+  .list-content-expanded {
+    position: absolute; /* 绝对定位，覆盖在地图上 */
+    max-height: calc(90vh - 56px - 40px); /* 展开状态的最大高度：90vh减去标题和footer */
+    width: calc(100% - 2rem); /* 考虑到边距，宽度与容器一致 */
+    z-index: 1000; /* 确保在地图上层 */
+    margin-bottom: 0; /* 移除底部边距，避免出现空白 */
+  }
+
+  .list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem; /* 固定内边距 */
+    height: 56px; /* 固定高度 */
+    box-sizing: border-box; /* 确保内边距不会增加元素总高度 */
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    background: white; /* 确保标题有背景 */
+    border-radius: 8px 8px 0 0; /* 顶部圆角 */
+    position: relative; /* 确保定位上下文 */
+    z-index: 1; /* 确保在顶层 */
+  }
+
+  .list-header h3 {
+    white-space: nowrap; /* 防止标题换行 */
+    overflow: hidden;
+    text-overflow: ellipsis; /* 文字溢出时显示省略号 */
+    max-width: calc(100% - 40px); /* 为图标留出空间 */
+  }
+
+  .location-list {
+    max-height: calc(90vh - 56px - 40px - 65px); /* 减少固定预留空间 */
+    overflow-y: auto; /* 启用垂直滚动 */
+    background: white; /* 确保列表内容区有背景 */
+    padding: 0.5rem 1rem; /* 增加内边距 */
+    padding-bottom: 0; /* 移除底部内边距 */
+  }
+}

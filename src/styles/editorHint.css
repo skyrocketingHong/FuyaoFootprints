@@ -1,0 +1,51 @@
+.editor-hint-container {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.editor-hint-container.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.editor-hint-content {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+}
+
+.hint-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.hint-paragraph {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.close-hint-btn {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  .editor-hint-content {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+  }
+}

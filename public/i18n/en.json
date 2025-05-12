@@ -1,0 +1,58 @@
+{
+  "app": {
+    "title": "skyrocketing's Travel Footprints",
+  },
+  "common": {
+    "close": "Close",
+    "all": "All",
+    "filter": "Filter",
+    "year": "Year",
+    "clearFilter": "Clear filters",
+    "showAllLocations": "Show all locations",
+    "selectFromList": "Select a location from the list to view details"
+  },
+  "list": {
+    "title": "Location List",
+    "stats": "{{count}} locations",
+    "statsFiltered": "(filtered from {{total}})",
+    "noLocations": "No matching locations found"
+  },
+  "location": {
+    "visitDate": "Visit date: "
+  },
+  "categories": {
+    "city": "City",
+    "nature": "Nature",
+    "historical": "Historical",
+    "food": "Food",
+    "other": "Other"
+  },
+  "editor": {
+    "title": "Location Data Editing Help",
+    "step1": "1. Get coordinates by searching for a location",
+    "step2": "2. Copy the generated JSON data",
+    "step3": "3. Add the data to locations.json file"
+  },
+  "creator": {
+    "title": "Add New Location",
+    "name": "Location Name",
+    "namePlaceholder": "Search for a location",
+    "description": "Description",
+    "descriptionPlaceholder": "Location description",
+    "date": "Visit Date",
+    "category": "Category",
+    "coordinates": "Coordinates (auto-filled)",
+    "generate": "Generate JSON",
+    "alerts": {
+      "noName": "Please enter a location name and select from dropdown",
+      "noCoordinates": "Please select a location from the dropdown to get coordinates",
+      "noDescription": "Please enter a location description",
+      "noDate": "Please select a visit date",
+      "jsonCopied": "JSON data copied to clipboard! You can paste it into the locations.json file.",
+      "copyError": "Unable to copy: "
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 My Travel Footprints | Powered by React and AMap API"
+  }
+}

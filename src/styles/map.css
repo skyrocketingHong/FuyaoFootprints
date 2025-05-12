@@ -1,0 +1,63 @@
+.map-container {
+  height: 70vh;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 自定义标记样式 */
+.custom-marker {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.custom-marker.city {
+  background-color: #4f46e5;
+}
+
+.custom-marker.nature {
+  background-color: #10b981;
+}
+
+.custom-marker.active {
+  width: 35px;
+  height: 35px;
+  z-index: 100;
+}
+
+/* 高德地图信息窗口样式 */
+.amap-info-content {
+  padding: 12px;
+  border-radius: 8px;
+  max-width: 300px;
+  font-size: 14px;
+}
+
+.amap-info-content h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.amap-info-content .info-date {
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.amap-info-content .info-desc {
+  margin-top: 5px;
+}
+
+/* 响应式地图高度调整 */
+@media (max-width: 1024px) {
+  .map-container {
+    height: 45vh; /* 减小地图高度，给列表更多空间 */
+  }
+}

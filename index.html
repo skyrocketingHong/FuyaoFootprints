@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#224679" />
+    <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="keywords"
+      content="扶摇skyrocketing,skyrocketing,Fuyao skyrocketing,skyrocketing Hong,skyrocketingHong,足迹,旅行,旅行足迹,足迹地图,足迹地图网站,足迹地图项目,足迹地图开源项目,足迹地图开源代码,足迹地图开源代码项目,足迹地图开源代码网站"
+    />
+    <meta name="description" content="扶摇skyrocketing的旅行足迹" />
+    <meta name="author" content="skyrocketing Hong" />
+    <title>旅行足迹 - I'm 扶摇skyrocketing</title>
+    <script>
+      (function (u, c) {
+        var d = document,
+          t = "script",
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) {
+          o.addEventListener("load", function (e) {
+            c(e);
+          });
+        }
+        s.parentNode.insertBefore(o, s);
+      })(
+        "https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/pangu/4.0.7/pangu.min.js",
+        function () {
+          pangu.spacingPage();
+        }
+      );
+    </script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- 高德地图安全配置 -->
+    <script type="text/javascript">
+      window._AMapSecurityConfig = {
+        serviceHost: "https://api.example.com/_AMapService",
+      };
+    </script>
+    <script
+      type="text/javascript"
+      src="https://webapi.amap.com/maps?v=2.0&key=1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s"
+    ></script>
+    <script src="https://webapi.amap.com/ui/1.1/main.js?v=1.1.1"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
